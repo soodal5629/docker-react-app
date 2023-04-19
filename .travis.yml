@@ -10,6 +10,7 @@ before_script:
   - echo "start creating an image with dockerfile"
   - docker build -t cl/docker-react-app -f Dockerfile.dev .
 
+# 도커 이미지 빌드
 script:
   - docker run -e CI=true cl/docker-react-app npm run test -- --coverage
 
